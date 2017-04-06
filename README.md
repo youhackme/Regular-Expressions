@@ -16,3 +16,25 @@ My journey to learn Regular Expressions
 
 
 
+Example:
+This website is stupid. Your speaking style is idiotic. Your knowledge is crap. This is so stupid. You're an idiot.
+
+Regex:
+/stupid|idiot(?:ic)?|crap/g
+
+Example:
+
+
+Note: If you want to capture/extract match, wrap it into `()` and then access it using `$1`
+
+Positive Lookaheads
+
+1. `/google(?=<)/ig` matches <a href="http://google.com">`Google`</a>
+
+Negative lookaheads:
+
+1. `/google(?!<)/ig` matches <a href="http://google`.com">`Google`</a>`
+
+Positive lookbehinds:
+
+1. `/google(?<=)/ig` matches <a href="http://google.com">`Google`</a>
